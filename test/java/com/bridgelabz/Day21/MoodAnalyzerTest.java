@@ -6,14 +6,22 @@ import org.junit.Test;
 public class MoodAnalyzerTest extends TestCase {
 
     @Test
-    public  void testMoodAnalysereturnSad(){
+    public  void testMoodAnalysereturnSad() throws MoodAnalyzerException {
         MoodAnalyzer mood = new MoodAnalyzer();
-        assertEquals("Sad",mood.analyseMood("“I am in Sad Mood”"));
+        assertEquals("Sad",mood.analyseMood("I am in Sad Mood"));
     }
 
     @Test
-    public  void testMoodAnalysereturnHappy(){
+    public  void testMoodAnalysereturnHappy() throws MoodAnalyzerException {
         MoodAnalyzer mood = new MoodAnalyzer();
-        assertEquals("Happy",mood.analyseMood("“I am in Happy Mood”"));
+        assertEquals("Happy",mood.analyseMood("I am in Happy Mood"));
     }
+
+    @Test
+    public  void testMoodAnalyseNullreturnHappy() throws MoodAnalyzerException {
+        MoodAnalyzer mood = new MoodAnalyzer();
+        assertEquals("Happy",mood.analyseMood(null));
+    }
+
+
 }
