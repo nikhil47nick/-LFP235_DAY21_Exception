@@ -1,5 +1,6 @@
-package com.bridgelabz.Day20;
+package com.bridgelabz.Day21;
 
+import com.bridgelabz.Day20.UserRegistration;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +16,7 @@ import static junit.framework.TestCase.assertEquals;
 public class EmailTest {
     private String email;
     private String expected;
-    private UserRegistration userRegistration;
+    private com.bridgelabz.Day20.UserRegistration userRegistration;
 
      public EmailTest(String email, String expected){
         this.email = email;
