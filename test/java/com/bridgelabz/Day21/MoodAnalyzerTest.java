@@ -23,5 +23,9 @@ public class MoodAnalyzerTest extends TestCase {
         assertEquals("Happy",mood.analyseMood(null));
     }
 
-
+    @Test
+    public  void testMoodAnalyseEmptyreturnEmpty() throws MoodAnalyzerException {
+        MoodAnalyzer mood = new MoodAnalyzer();
+        assertEquals("Empty",mood.analyseMood(""));
+    }
 }
